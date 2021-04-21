@@ -1,6 +1,6 @@
 {
   "name": "awesome-comp-lib",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "A super duper simple awesome component library",
   "main": "dist/index.js",
   "scripts": {
