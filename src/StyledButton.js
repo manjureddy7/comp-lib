@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import React from 'react';
 
 const Button = styled.button`
   background: transparent;
@@ -7,7 +8,7 @@ const Button = styled.button`
   color: palevioletred;
   margin: 0 1em;
   padding: 0.25em 1em;
-`;
+`
 
 const StyledButton = () => {
     return(

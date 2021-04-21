@@ -73,7 +73,9 @@ module.exports = {
     target: 'node',
     externals: [
       "react",
-      "react-dom"
+      "react-dom",
+      "@material-ui/core",
+      "styled-components"
     ],
     module: {
       rules: [jsRules, fileRules],
