@@ -9,12 +9,15 @@ const Button = styled.button`
   margin: 0 1em;
   padding: 0.25em 1em;
 `
+interface StyledButtonProps {
+    onStyledButtonClick: () => {},
+}
 
-const StyledButton = () => {
+const StyledButton:React.FC<StyledButtonProps> = ({ onStyledButtonClick }) => {
     return(
         <div>
             <h1>I'm a styled button</h1>
-            <Button>I'm a styled button</Button>
+            <Button onClick={onStyledButtonClick}>I'm a styled button</Button>
         </div>
     )
 }

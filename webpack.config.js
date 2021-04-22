@@ -2,9 +2,6 @@ const path = require('path');
 const pkg = require('./package.json');
 const nodeExternals = require('webpack-node-externals');
 
-// This is where we define the Inline magic.
-// This loader will turn all .svg, .jpg and .png files
-// into something that can be inlined in the final bundle
 const fileRules = {
   test: /\.(svg|jpg|png)$/,
   use: [
@@ -18,7 +15,6 @@ const fileRules = {
   ],
 };
 
-// Pretty standard babel configurations for modern react apps
 const jsRules = {
   test: /\.(js|jsx)$/,
   exclude: /node_modules/,
@@ -29,6 +25,11 @@ const jsRules = {
     },
   },
 };
+
+const tsRules = {
+  test: /\.tsx?$/,
+  loader: 'ts-loader'
+}
 
 module.exports = {
     entry: "./src/index.js",
@@ -45,7 +46,24 @@ module.exports = {
       library: pkg.name,
       libraryTarget: "umd",
     },
-    // module: {
+    target: 'node',
+    resolve: {
+      extensions: ['*', '.js', '.jsx', '.ts', '.tsx'],
+    },
+    externals: [
+      "react",
+      "react-dom",
+      "@material-ui/core",
+      "styled-components"
+    ],
+    module: {
+      rules: [jsRules, fileRules, tsRules],
+    }
+};
+
+
+
+  // module: {
     //   rules: [
     //     {
     //       test: /\.(js|jsx)$/,
@@ -70,14 +88,3 @@ module.exports = {
     //     }
     //   ]
     // },
-    target: 'node',
-    externals: [
-      "react",
-      "react-dom",
-      "@material-ui/core",
-      "styled-components"
-    ],
-    module: {
-      rules: [jsRules, fileRules],
-    }
-};
