@@ -1,6 +1,6 @@
 {
   "name": "awesome-comp-lib",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "A super duper simple awesome component library",
   "main": "dist/index.js",
   "types": "./bin/index.d.ts",
@@ -48,5 +48,6 @@
   },
   "dependencies": {
 
-  }
+  },
+  "keywords": ["React", "Typescript", "Material UI", "Styled Components", "Component Library"]
 }
