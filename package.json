@@ -1,9 +1,10 @@
 {
   "name": "awesome-comp-lib",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "A super duper simple awesome component library",
   "main": "dist/index.js",
   "types": "./bin/index.d.ts",
+  "typings": "./bin/index.d.ts",
   "scripts": {
     "start": "webpack --watch",
     "build": "webpack",
