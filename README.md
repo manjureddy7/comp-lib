@@ -21,11 +21,18 @@ return(
   <Age age={26} />
 )
 ```
+
 ## Things you need
 
 ```
-Currently our Awesome library depends on Material UI, Styled Components & React, React DOM. Make sure you have installed these
+Currently our Awesome library depends on
+Material UI,
+Styled Components
+React & React DOM.
+Make sure you have installed these
 
 ```
+
 ## License
+
 [MIT](https://choosealicense.com/licenses/mit/)
